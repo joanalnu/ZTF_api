@@ -133,12 +133,10 @@ from astropy import units as u
 dirpath = os.path.dirname(os.path.abspath(__file__))
 ```
 
-An update is coming to this, but until then you will need to copy the html table available here (https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi) with your credentials to a file named Requested_Query_ZTF_ForcedPhotometry_Service.txt (or change the code name) in the same folder as this code.
+You will need to go to the ZTF Requests website (https:), authenticate yourself, select 'All recent jobs' and click query database. Here you can see the status of your jobs. When all of them are finished, copy-paste the table into a txt file named "Requested_Query_ZTF_ForcedPhotometry_Service.tx" (or change the code name) into the API folder.
 
 This snippet opens that file and reads the data.
 ```python
-# download query table without need of copying
-
 file = open(f'{dirpath}/Requested_Query_ZTF_ForcedPhotometry_Service.txt', 'r')
 # file format (from ZTF query table):
 # reqId ra  dec startJD endJD   created started ended   exitcode    lightcurve
