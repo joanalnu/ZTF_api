@@ -5,9 +5,6 @@ import math
 from astropy import units as u
 dirpath = os.path.dirname(os.path.abspath(__file__))
 
-
-# download query table without need of copying
-
 file = open(f'{dirpath}/ZTF/Requested_Query_ZTF_ForcedPhotometry_Service.txt', 'r')
 # file format:
 # reqId ra  dec startJD endJD   created started ended   exitcode    lightcurve
