@@ -59,8 +59,8 @@ with open(f'{dirpath}/file.txt', 'r') as file:
         pswd='strongpassword' # change for you ZTF user password
 
         # request data to ZTF server (using the wget ommand provided by ZTF, see documentation)
-        commad = f''' 
+        command = f''' 
         osascript -e 'tell application "Terminal" to do script "wget --http-user=ztffps --http-passwd=dontgocrazy! -O log.txt \\"https://ztfweb.ipac.caltech.edu/cgi-bin/requestForcedPhotometry.cgi?ra={ra_deg}&dec={dec_deg}&jdstart={jd_start}&jdend={jd_end}&email={email}&userpass={pswd}\\""'
         '''
-        subprocess.Popen(commad, shell=True) # You can set shell to false to avoid terminal windows popping-up
-        os._exit()
+        subprocess.Popen(command, shell=True) # You can set shell to false to avoid terminal windows popping-up
+        # os._exit()
