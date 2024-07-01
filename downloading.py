@@ -43,5 +43,5 @@ for line in file:
         with requests.sessions() as s:
             textdata = s.get(url, auth=('ztffps', 'dontgocrazy!')).text
             with open(f'{dirpath}/ZTF/ZTF_{name}.txt', 'w') as f:
-                for lin in textdata:
+                for line in textdata:
                     f.write(line)
