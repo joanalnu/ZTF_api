@@ -8,14 +8,12 @@ import requests
 import math
 import re
 dirpath = os.path.dirname(os.path.abspath(__file__))[:-8]
-print(dirpath)
 
-
-def get_credentials(typeof):
+def get_credentials():
     with open(dirpath+'/credentials.txt', 'r') as f:
         content = f.readlines()
-        email = content[0].split('=')[1]
-        pswd = content[1].split('=')[1]
+        email = content[0].split('=')[1].replace("\n", "")
+        pswd = content[1].split('=')[1].replace("\n", "")
     return (email, pswd)
 
 def request(filename):

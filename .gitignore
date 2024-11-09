@@ -1,3 +1,4 @@
 deprecated/
 build/
 ZTF_api.egg-info
+ztf_api/__pycache__
