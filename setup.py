@@ -24,16 +24,12 @@ setuptools.setup(
     url='https://github.com/joanalnu/ZTF_api',
     packages=setuptools.find_packages(),
     python_requires=">=3.9",
-    install_requires=[
-        'astropy',
-        'requests',
-    ],
+    install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=requirements,
     package_data={"ztf_api": ["static/*"]},
     include_package_data=True,
 )
