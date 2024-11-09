@@ -14,7 +14,7 @@ with open("ztf_api/_version.py") as version_file:
 
 setuptools.setup(
     name="ZTF_api",
-    version=1.0,
+    version=2.0,
     author="Joan Alcaide-Núñez",
     author_email="joanalnu@outlook.com",
     license="MIT",
