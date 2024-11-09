@@ -3,3 +3,4 @@ os
 requests
 math
 astropy
+re

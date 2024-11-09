@@ -1,5 +1,5 @@
-# ZTF_API
-API to access ZTF (Zwicky Transient Facility) data. This is an API which aims to provide an easier access to the ZTF photometry database. It is faster and perfect for large lists and typing errors will be avoided by using it.
+# ZTF API
+API to access ZTF data: This is an API which aims to provide an easier access to the ZTF photometry database. It is faster and typing errors will be avoided by using this code.
 
 [![repo](https://img.shields.io/badge/GitHub-joanalnu%2FZTF_api-blue.svg?style=flat)](https://github.com/joanalnu/ZTF_api)
 [![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/joanalnu/ZTF_api/LICENSE)
@@ -7,16 +7,16 @@ API to access ZTF (Zwicky Transient Facility) data. This is an API which aims to
 [![DOI](https://zenodo.org/badge/820854715.svg)](https://doi.org/10.5281/zenodo.12568639)
 
 ## Installation
-Firstly, clone this repository into your local machine
+
+The recommendation is to install via git
 ```bash
 git clone https://github.com/joanalnu/ZTF_api.git
 ```
-or using github features to clone, open in Github Desktop or download a ZIP.
+or using github features to clone, open in GitHub Desktop or download a ZIP.
 
-Then install the repository as a package by using ```bash cd``` to navigate to the cloned repository and running the following command:
-```bash
-pip install .
-```
+## Instructions
+
+Here is an explanation on how to use this code.
 
 ### The ZTF Survey
 
@@ -28,56 +28,8 @@ The ZTF requests website enables everybody with the needed credentials (see http
 
 This is an API which aims to provide an easier access to the ZTF photometry database. It is faster and typing errors will be avoided by using this code. To effectively download the data, the API must be separated in two parts, here we explain the functionalities of each one.
 
-## Instructions
-Here is an explanation on how to use this code to download ZTF forced photometry data. For a more in depth explanation of the functioning of the code, please refer to the [code explanation](#code-explanation) section.
-
-Before using the API, you must have created an account in the ZTF requests website and have the needed credentials to access the data. You will need to copy your credentials ('email' and 'password') into the ```credentials.txt``` file in the root of the repository.
-
-To use the API you have to import it in your code
-```python
-import ztf_api
-```
-and call the functions you want to use
-```python
-ztf_api.download()
-```
-
-to use request you need a file with the requests with the following format. Name DateObs ra dec (DateObs in JD, but MJD and hourangles also work; coords in degree, but hour also work)
-
-## Contributing
-
-To contribute, please contact me via [email](mailto:joanalnu@outlook.com), open an issue or send a pull request.
-
-## Citing ZTF API
-
-If you make use of this code, please cite it:
-
-```bibtex
-@software{joanalnu_2024,
-  author       = {Alcaide-Núñez, joan},
-  title        = {joanalnu/ZTF\_api},
-  month        = july,
-  year         = 2024,
-  publisher    = {Zenodo},
-  version      = {v1.0},
-  doi          = {10.5281/zenodo.12568639},
-  url          = {https://github.com/joanalnu/ZTF_api}
-}
-```
-
-
-## Acknowledgements
-
-First of all, I would like to thank the team behind the ZTF survey and the IPAC Caltech project, which manages this survey, for their service to the astrophysics community and their responsibility providing open access to data.
-
-Further, a very bold thank to Claudia Gutiérrez, Lluís Galbany and Tomás E. Müller-Bravo from ICE-CSIC for their support and insightful explanations.
-
-I also acknowledge the use of the open-source Python libraries: subprocess, os, astropy, requests, and math.
-
-
-## Code Explanation
-### request functioin
-The first part is named ```request()``` and its job is to request the required data to the ZTF server. Let's analyse what it does:
+### Part 1
+The first part is named ```code requesting.py``` and its job is to request the required data to the ZTF server. Let's analyse what it does:
 
 First we want to import the needed libraries, note that you will need to install those libraries (see requirements.txt) and we read the folder path.
 
@@ -166,9 +118,9 @@ Finally, after collecting the needed information we can request the forced photo
         # os._exit() # change that to exit system after completion
 ```
 
-### download function
+### Part 2
 
-Next, the second part will download the data when available and its named ```download())```. Let's go throught the code as for the first part.
+Next, the second part will download the data when available and its named ```code downloading.py```. Let's go throught the code as for the first part.
 
 As always, we import the needed libraries and define the folder path of this script.
 
@@ -181,11 +133,7 @@ from astropy import units as u
 dirpath = os.path.dirname(os.path.abspath(__file__))
 ```
 
-You will need to go to the ZTF Requests website ([https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi](https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi)), authenticate yourself, select 'All recent jobs' and click query database.
-
-![Image of ZTF website](https://github.com/joanalnu/ztf_api/raw/main/main/ztf_website.png)
-
-Here you can see the status of your jobs. When all of them are finished, copy-paste the table into a txt file in the API folder (ztf_api).
+You will need to go to the ZTF Requests website (https:), authenticate yourself, select 'All recent jobs' and click query database. Here you can see the status of your jobs. When all of them are finished, copy-paste the table into a txt file named "Requested_Query_ZTF_ForcedPhotometry_Service.tx" (or change the code name) into the API folder.
 
 This snippet opens that file and reads the data.
 ```python
@@ -240,3 +188,33 @@ Finally, we use requests to access the txt data file and write the content into 
 ```
 
 By the end you should have a folder named ```code ZTF``` under this API's directory in which the files from ZTF forced photometry are downloaded as txt files.
+
+## Contributing
+
+To contribute, please contact me at joanalnu5@gmail.com. You may also open an issue or send pull requests.
+
+## Citing ZTF API
+
+If you make use of this code, please cite it:
+
+```bibtex
+@software{joanalnu_2024,
+  author       = {Alcaide-Núñez, joan},
+  title        = {joanalnu/ZTF\_api},
+  month        = july,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.12568639},
+  url          = {https://github.com/joanalnu/ZTF_api}
+}
+```
+
+
+## Acknowledgements
+
+First of all, I would like to thank the team behind the ZTF survey and the IPAC Caltech project, which manages this survey, for their service to the astrophysics community and their responsibility providing open access to data.
+
+Further, a very bold thank to Claudia Gutiérrez, Lluís Galbany and Tomás E. Müller-Bravo from ICE-CSIC for their support and insightful explanations.
+
+I also acknowledge the use of the open-source Python libraries: subprocess, os, astropy, requests, and math.
