@@ -54,9 +54,8 @@ Where: the date of observation can be in Julian Date (JD), Modified Julian Date 
 ### Download function
 Once all your request have been completed (which you can check here. [https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi](https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi)), you will have to copy paste the table on that website into a txt file. When you call the download function you will have to provide to arguments following:
 ```python
-ztf_api.download(path_of_request_file, path_of_download_file)
+ztf_api.download(name_of_request_file, name_of_download_file)
 ```
-
 
 ## Contributing
 
