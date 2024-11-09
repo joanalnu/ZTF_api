@@ -37,12 +37,26 @@ To use the API you have to import it in your code
 ```python
 import ztf_api
 ```
-and call the functions you want to use
+and call the functions you want to using:
 ```python
 ztf_api.download()
 ```
 
-to use request you need a file with the requests with the following format. Name DateObs ra dec (DateObs in JD, but MJD and hourangles also work; coords in degree, but hour also work)
+All the files you use (request and download txt files) need to be stored in the same path as the cloned API directory.
+
+### Request function
+The request function is uesd to query data to the ZTF Photometry Database. To use the request you will have to provide a ```txt``` file containing the following information:
+```
+Name DateObs RA Dec
+```
+Where: the date of observation can be in Julian Date (JD), Modified Julian Date (MJD) or hour angles; and the coordinates can be in degrees or hours.
+
+### Download function
+Once all your request have been completed (which you can check here. [https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi](https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi)), you will have to copy paste the table on that website into a txt file. When you call the download function you will have to provide to arguments following:
+```python
+ztf_api.download(path_of_request_file, path_of_download_file)
+```
+
 
 ## Contributing
 
@@ -76,7 +90,7 @@ I also acknowledge the use of the open-source Python libraries: subprocess, os, 
 
 
 ## Code Explanation
-### request functioin
+### request function
 The first part is named ```request()``` and its job is to request the required data to the ZTF server. Let's analyse what it does:
 
 First we want to import the needed libraries, note that you will need to install those libraries (see requirements.txt) and we read the folder path.
