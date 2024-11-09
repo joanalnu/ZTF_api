@@ -196,7 +196,7 @@ dirpath = os.path.dirname(os.path.abspath(__file__))
 
 You will need to go to the ZTF Requests website ([https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi](https://ztfweb.ipac.caltech.edu/cgi-bin/getForcedPhotometryRequests.cgi)), authenticate yourself, select 'All recent jobs' and click query database.
 
-![Image of ZTF website](https://github.com/joanalnu/ztf_api/raw/main/main/ztf_website.png)
+![Image of ZTF website](https://github.com/joanalnu/ZTF_api/blob/main/ztf_website.png)
 
 Here you can see the status of your jobs. When all of them are finished, copy-paste the table into a txt file in the API folder (ztf_api).
 
