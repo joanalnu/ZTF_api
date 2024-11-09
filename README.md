@@ -4,7 +4,8 @@ API to access ZTF (Zwicky Transient Facility) data. This is an API which aims to
 [![repo](https://img.shields.io/badge/GitHub-joanalnu%2FZTF_api-blue.svg?style=flat)](https://github.com/joanalnu/ZTF_api)
 [![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/joanalnu/ZTF_api/LICENSE)
 ![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue)
-[![DOI](https://zenodo.org/badge/820854715.svg)](https://doi.org/10.5281/zenodo.12568639)
+[![DOI](https://zenodo.org/badge/820854715.svg)](https://doi.org/10.5281/zenodo.12568638)
+
 
 ## Installation
 Firstly, clone this repository into your local machine
@@ -64,10 +65,24 @@ To contribute, please contact me via [email](mailto:joanalnu@outlook.com), open 
 ## Citing ZTF API
 
 If you make use of this code, please cite it:
+```bibtex
+@software{joanalnu_2024,
+  author       = {Alcaide-Núñez, Joan},
+  title        = {joanalnu/ZTF\_api},
+  month        = july,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v2.0},
+  doi          = {10.5281/zenodo.14059448},
+  url          = {https://github.com/joanalnu/ZTF_api}
+}
+```
+
+or depending on the version you used:
 
 ```bibtex
 @software{joanalnu_2024,
-  author       = {Alcaide-Núñez, joan},
+  author       = {Alcaide-Núñez, Joan},
   title        = {joanalnu/ZTF\_api},
   month        = july,
   year         = 2024,
