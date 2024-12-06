@@ -10,5 +10,5 @@ ztf_api/__pycache__
 # testing
 tests
 tests/__pycache__
-.github/workflows/pytest-tests.yml
+.github/
 .pytest_cache
