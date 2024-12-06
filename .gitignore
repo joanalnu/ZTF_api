@@ -8,3 +8,6 @@ ztf_api/__pycache__
 .DS_Store
 
 # testing
+tests
+tests/__pycache__
+.github/workflows/pytest-tests.yml
