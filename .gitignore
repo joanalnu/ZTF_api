@@ -1,4 +1,10 @@
+# api files
 deprecated/
+
+# build
 build/
 ZTF_api.egg-info
 ztf_api/__pycache__
+.DS_Store
+
+# testing
