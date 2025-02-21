@@ -100,8 +100,7 @@ First of all, I would like to thank the team behind the ZTF survey and the IPAC 
 
 Further, a very bold thank to Claudia Gutiérrez, Lluís Galbany and Tomás E. Müller-Bravo from ICE-CSIC for their support and insightful explanations.
 
-I also acknowledge the use of the open-source Python libraries: subprocess, os, astropy, requests, and math.
-
+I also acknoledge the use of requests and astropy libraries.
 
 ## Code Explanation
 ### request function
