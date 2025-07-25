@@ -60,7 +60,7 @@ ztf_api.download(name_of_request_file, name_of_download_file)
 
 ## Contributing
 
-To contribute, please contact me via [email](mailto:joanalnu@outlook.com), open an issue or send a pull request.
+To contribute, please contact me via [email](https://joanalnu.github.io/contact), open an issue or send a pull request.
 
 ## Citing ZTF API
 
